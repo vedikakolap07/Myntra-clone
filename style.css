@@ -1,0 +1,558 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                 Roboto, Helvetica, Arial, sans-serif;
+}
+
+
+body{
+    background-color: #ffffff;
+   
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    height: 80px;
+    background: white;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    gap: 20px;
+    box-shadow: 0 4px 28px rgba(0,0,0,0.08);
+    top: 0;
+}
+
+
+/* Logo */
+.header img {
+    width: 55px;
+    height: auto;
+}
+/* Navigation */
+nav {
+    position: static;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+nav ul li a sup{
+    color: #ff3f6c;
+    font-size: 10px;
+}
+
+/* Search bar */
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f6;
+    padding: 10px 15px;
+    border-radius: 5px;
+    flex: 1;
+    max-width: 700px;    
+    min-width: 200px;  
+}
+
+.search-container i {
+    margin-right: 10px;
+    color: gray;
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    height: 20px;   
+}
+
+/* Profile/Wishlist/Cart */
+.profile-container,
+.wishlist-container,
+.cart-container{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    cursor: pointer;
+    width: 30px;
+}
+
+.profile-container img,
+.wishlist-container img,
+.cart-container img{
+    width: 25px;
+    height: 25px;
+}
+
+.profile-container span,
+.wishlist-container span,
+.cart-container span{
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.dropdown{
+    position: static;
+}
+
+/* Mega menu */
+.mega-menu {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 1000px;
+    background: white;
+    padding: 30px 50px;
+    display: none;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.1);
+    border-top: 1px solid #eaeaec;
+    z-index: 9999;
+}
+
+
+.dropdown:hover .mega-menu {
+  display: grid;
+}
+
+.mega-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.mega-column h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #ff3f6c;
+}
+
+.mega-column a {
+  font-size: 13px;
+  color: #696b79;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+.mega-column a:hover {
+  color: #ff3f6c;
+}
+
+.mega-column hr {
+  border: none;
+  border-top: 1px solid #eaeaec;
+  margin: 15px 0;
+}
+
+/* Main banners */
+main{
+    width: 92%;
+    margin: 20px auto;
+    
+}
+
+.banner-side {
+    position: fixed;
+    right: 0;
+    top: 35%;
+    background-color: #535766;
+    color: white;
+    padding: 40px 10px;
+    font-size: 24px;
+    font-weight: bold;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    z-index: 999;
+    cursor: pointer;
+}
+
+.banner1 img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/* Two image section */
+.banner-two-column{
+    display: flex;
+    width: 100%;
+}
+
+.banner-two-column img{
+    width: 50%;
+    height: auto;
+}
+
+/* Full width banners */
+.banner2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner2 img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.carousalone {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousal-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* dots */
+.dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 7px;
+    width: 7px;
+    background: #cdcdcd;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #7e818c;
+}
+
+/* Hide scrollbar */
+.carousal ul::-webkit-scrollbar {
+    display: none;
+}
+
+.carousal ul li {
+    flex: 0 0 auto;
+    width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+  
+
+}
+
+.carousal ul li img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+
+/* SECOND CAROUSEL */
+.carousaltwo {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousal-tracktwo {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.carousaltwo .slide {
+    width: 100%;
+    display: flex;
+    flex-shrink: 0;
+}
+
+.carousaltwo .slide img {
+    width: 16.66%;
+    display: block;
+}
+
+/* Dots for second carousel */
+.carousaltwo .dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.carousaltwo .dot {
+    height: 7px;
+    width: 7px;
+    background: #cdcdcd;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.carousaltwo .dot.active {
+    background: #7e818c;
+}
+
+.banner3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner3 img{
+    width: 100%;
+    height: auto;
+    display: block;
+
+}
+
+.shop-by-category {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.shop-by-category img {
+    width: calc(16.66% - 10px); /* 6 per row */
+    height: auto;
+    display: block;
+}
+
+.banner4 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.banner5 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.banner6 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+/* Footer Main */
+footer {
+    background-color: #fafbfc;
+    padding: 40px 80px;
+    color: #696b79;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-middle img {
+    width: 140px;
+    height: 42px;
+    object-fit: contain;
+    margin-right: 10px;
+    margin-top: 10px;   
+    display: flex;
+}
+
+.footer-middle-img-container {
+    display: flex;
+    flex-direction:  row;
+   
+}
+
+.footer-right p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    max-width: 300px;
+}
+
+.footer-right img {
+    width: 48px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+footer .footer-container {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+footer .footer-bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+
+footer .footer-address {
+    font-size: 12px;
+    color: #94969f;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer .footer-address-ab {
+    color: #526cd0;
+    text-decoration: none;
+    /* i want to keep it in bottom right */
+    justify-content: flex-end;
+}
+
+/* Headings */
+footer p.footer1,
+footer p.footer2,
+footer p.footer3,
+footer p.footer4 {
+    font-weight: bold;
+    color: #282c3f;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+/* Fix for footer1.5 class issue */
+footer p[class="footer1.5"] {
+    font-weight: bold;
+    color: #282c3f;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-top: 25px;
+}
+
+/* Lists */
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+footer ul li {
+    margin-bottom: 6px;
+}
+
+/* Links */
+footer ul li a {
+    text-decoration: none;
+    color: #696b79;
+    font-size: 14px;
+}
+
+footer ul li a:hover {
+    color: #ff3f6c;
+}
+
+/* Social icons */
+.social-icons i {
+    font-size: 20px;
+    color: #696b79;
+    margin: 10px;
+    
+}
+
+.social-icons i:hover {
+    color: #ff3f6c;
+}
+
+/* Horizontal line */
+footer hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+footer p {
+    margin-bottom: 10px;
+    color: #94969f;
+    font-size: 14px;
+}
+
+footer h3 {
+    font-weight: bold;
+    color: #535766;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* Address styling */
+footer address {
+    font-style: normal;
+    margin: 10px 0;
+    color: #696b79;
+}
+
+/* Ordered list */
+footer ol {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+footer ol li {
+    margin-bottom: 10px;
+}
+
+/* Definition list */
+footer ul {
+    margin: 20px 0;
+}
+
+footer ul li {
+    font-weight: bold;
+    color: #94969f;
+    margin-top: 15px;
+    list-style-type: disc;
+    margin-left: 40px;
+}
+
+
+/* Strong headings */
+footer strong {
+    display: inline-block;
+    margin-top: 20px;
+    color: #535766;
+    font-size: 14px;
+}
