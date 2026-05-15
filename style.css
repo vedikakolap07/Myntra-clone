@@ -434,12 +434,31 @@ footer .footer-address {
     flex-direction: row;
     justify-content: space-between;
 }
+.footer-address-ab {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
 
-footer .footer-address-ab {
+.footercolorp {
     color: #526cd0;
-    text-decoration: none;
-    /* i want to keep it in bottom right */
-    justify-content: flex-end;
+}
+
+.popular-searches {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.popular-searches h3 {
+  margin: 0;
+}
+
+.popular-searches hr {
+  flex: 1;
+  margin: 0;
+  border: none;
+  border-top: 1px solid #d4d5d9;
 }
 
 /* Headings */

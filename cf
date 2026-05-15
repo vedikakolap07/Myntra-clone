@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="400" height="200" style="border:1px solid #000000;">
+Your browser does not support the HTML canvas tag.
+</canvas>
+
+<script>
+  // 1. Get the canvas element
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+
+  // 2. Draw a red rectangle
+  ctx.fillStyle = "#FF0000";
+  ctx.fillRect(20, 20, 150, 100);
+
+  // 3. Draw a blue circle (arc)
+  ctx.beginPath();
+  ctx.arc(300, 100, 50, 0, 2 * Math.PI);
+  ctx.strokeStyle = "blue";
+  ctx.stroke();
+
+  // 4. Draw text
+  ctx.font = "30px Arial";
+  ctx.fillStyle = "black";
+  ctx.fillText("Canvas", 10, 180);
+</script>
+
+</body>
+</html>
+
+
+<form action="/submit-form-page" method="post">
+    <!-- Text Input -->
+    <p>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="user_name" required>
+    </p>
+
+    <!-- Email Input -->
+    <p>
+        <label for="mail">Email:</label>
+        <input type="email" id="mail" name="user_email" required>
+    </p>
+
+    <!-- Message Textarea -->
+    <p>
+        <label for="msg">Message:</label>
+        <textarea id="msg" name="user_message"></textarea>
+    </p>
+
+    <!-- Submit Button -->
+    <p>
+        <button type="submit">Submit</button>
+    </p>
+</form>
