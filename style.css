@@ -134,6 +134,14 @@ nav ul li a sup{
     z-index: 9999;
 }
 
+.slide-link {
+  display: block;
+}
+
+.slide-link img {
+  display: block;
+  width: 100%;
+}
 
 .dropdown:hover .mega-menu {
   display: grid;
